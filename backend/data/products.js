@@ -79,4 +79,6 @@ const products = [
   },
 ]
 
-export default products
+export default products // This is ESM
+
+// module.exports = products; // This is CJS
