@@ -26,7 +26,7 @@ import {
     USER_DELETE_REQUEST,
     USER_DELETE_SUCCESS,
     USER_DELETE_FAIL,
-    
+
     USER_UPDATE_REQUEST,
     USER_UPDATE_SUCCESS,
     USER_UPDATE_FAIL,
@@ -259,6 +259,8 @@ export const updateUser = (user) => async (dispatch, getState) => {
         }
 
         const { data } = await axios.put(`/api/users/${user._id}`, user, config)
+
+        console.log("after upate=>" + JSON.stringify(data))
 
         dispatch({ type: USER_UPDATE_SUCCESS })
 
