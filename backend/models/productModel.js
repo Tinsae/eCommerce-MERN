@@ -3,6 +3,12 @@ import mongoose from "mongoose"
 // we didn't create seprate file for reviewsSchema b/c
 // we are going to use it here only
 const reviewSchema = mongoose.Schema({
+    // user who created the review
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: "User"
+    },
     name: {
         type: String,
         required: true
